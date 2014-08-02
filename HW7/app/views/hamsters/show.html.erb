@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<h3>
+	<%= "#{@user.email}'s Hamster: #{@hamster.name}" %>
+</h3>
+
+<em>
+	<%= @hamster.phrase %>
+</em><br>
+
+<%= link_to "Delete this Hamster", user_hamster_path, method: :delete %>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HW7 - Building a Secure User Authentication Model</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%= flash[:notice] if flash[:notice] %><br>
+	<%= link_to 'Log In', :log_in %>
+	<%= link_to 'Log Out', :log_out %>
+
+	<h1>
+		Secure User Authentication from Scratch
+	</h1>
+
+<%= yield %>
+
+	<div>
+		<ul>
+			<li>
+				Follow the blog post on the NYCDA <a href ="http://nycda.com/blog/basic-user-authentication-model-in-rails-4/" _target="blank">blog</a>
+			</li>
+			<li>
+				Make sure that you’re completely familiar with how password salting and password hashing works. 
+			</li>
+			<li>
+				Use class methods in a Rails app to DRY up your code
+			</li>
+			<li>
+				Attempt what we did in class (implementing a User model) from scratch once again. If you finish, associate another model to the User model, such as a posts model, and implement functionality for the user to create posts.
+			</li>
+			<li>
+				This lesson was inspired by the following Railscast, which you may also find helpful, although it is a bit out of date: http://railscasts.com/episodes/250-authentication-from-scratch
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

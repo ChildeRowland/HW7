@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<h3>
+	<%= "All Users" %>
+</h3>
+
+<div>
+	
+	<ul>
+		<% User.all.each do |u| %> 
+		<li>
+			<%= "#{u.email} (#{u.id})" %>
+		</li>
+		<% end %>
+	</ul>
+
+</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<h3>
+	<%= "#{@user.email}'s Hamster Collection" %>
+</h3>
+
+<div>
+		<% if @hamster.last.nil? %>
+		<%= "No Hamsters Yet" %>
+	<ul>
+		<% @hamster.all.each do |h| %>
+		<li>
+			<%= h.name %><br>
+			<%= h.phrase %><br>
+			<%= link_to "view #{h.name}", user_hamster_path(:id => h.id)  %>
+		</li>
+		<% end %>
+		<% end %>
+	</ul>
+</div>
